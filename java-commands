@@ -1,0 +1,78 @@
+javac -version   // jdk version
+java -version // JRE version
+
+// multiple version of java on mac m1
+brew jenv | sdkman
+homebrew-cask to install the versions of java
+jenv to manage the installed versions of java
+
+brew search --formulae java
+brew search --formulae openjdk
+
+If you need to have openjdk first in your PATH, run:
+  echo 'export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"' >> ~/.zshrc
+
+For compilers to find openjdk you may need to set:
+  export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
+
+
+  If you need to have openjdk@11 first in your PATH, run:
+  echo 'export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"' >> ~/.zshrc
+
+For compilers to find openjdk@11 you may need to set:
+  export CPPFLAGS="-I/opt/homebrew/opt/openjdk@11/include"
+
+  It installs the package into the package's own directory
+Under /opt/homebrew/Cellar for M1-Mac
+
+install homebrew
+install homebrew jenv
+install homebrew-cask
+install a specific java version using cask (see "homebrew-cask versions" paragraph below)
+add this version for jenv to manage it
+check the version is correctly managed by jenv
+repeat steps 4 to 6 for each version of java you need
+
+brew install jenv
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
+brew tap homebrew/cask-versions
+brew install --cask java7
+
+// java path
+JDKs downloaded from Oracle: /Library/java/JavaVirtualMachines/jdk1.8.0_341.jdk/contents/Home
+
+export JAVA_7_HOME=$(/usr/libexec/java_home -v1.7)
+export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
+export JAVA_9_HOME=$(/usr/libexec/java_home -v9)
+
+alias java7='export JAVA_HOME=$JAVA_7_HOME'
+alias java8='export JAVA_HOME=$JAVA_8_HOME'
+alias java9='export JAVA_HOME=$JAVA_9_HOME'
+
+#default java8
+export JAVA_HOME=$JAVA_8_HOME
+
+if which jenv > /dev/null; then eval "$(jenv init -)"; fi
+export PATH="$HOME/.jenv/shims:$PATH"
+
+brew install java --cask
+brew install --cask homebrew/cask-versions/adoptopenjdk8
+
+jenv versions
+jenv global XX
+java -version
+
+/usr/libexec/java_home -V     // Find locations of previously installed Java JDK:
+ /usr/libexec/java_home -v 1.8
+
+============= working =============
+ brew search adoptopenjdk/openjdk
+ brew install adoptopenjdk11 
+ ls -lsa /Library/Java/JavaVirtualMachines/
+ echo 'export PATH="/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home/bin:$PATH"' >> ~/.zshrc
+ source ~/.zshrc
+
+ brew install adoptopenjdk/openjdk/adoptopenjdk14
+ echo 'export PATH="/Library/Java/JavaVirtualMachines/adoptopenjdk-14.jdk/Contents/Home/bin:$PATH"' >> ~/.zshrc
