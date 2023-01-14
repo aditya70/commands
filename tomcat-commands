@@ -1,0 +1,8 @@
+# Mac M1 installation
+
+sudo mkdir -p /usr/local
+sudo mv ~/Downloads/tomcat /usr/local
+sudo rm -f /Library/Tomcat
+sudo ln -s /usr/local/tomcat/ /Library/Tomcat
+sudo chown -R YOUR USERNAME /Library/Tomcat
+sudo chmod +x /Library/Tomcat/bin/*.sh
