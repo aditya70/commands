@@ -76,3 +76,18 @@ java -version
 
  brew install adoptopenjdk/openjdk/adoptopenjdk14
  echo 'export PATH="/Library/Java/JavaVirtualMachines/adoptopenjdk-14.jdk/Contents/Home/bin:$PATH"' >> ~/.zshrc
+
+ ============= working ===============
+ brew install openjdk@17 // Summary:  /opt/homebrew/Cellar/openjdk@17/17.0.5
+ # Java will be installed here: /usr/local/opt/openjdk@17/bin/java // not installed here
+ # For the system Java wrappers to find this JDK, symlink it with: sudo ln -sfn /usr/local/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk   //path different not work
+
+sudo ln -sfn /opt/homebrew/Cellar/openjdk@17/17.0.5/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+echo 'export PATH="/Library/Java/JavaVirtualMachines/openjdk.jdk/Contents/Home/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+
+========= sdkman ====================
+curl -s "https://get.sdkman.io" | bash
+sdk list java 
+sdk install java 17.0.4.1-tem
+/Users/freedev/.sdkman/candidates/java/17.0.4.1-tem
