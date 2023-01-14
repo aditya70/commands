@@ -1,0 +1,15 @@
+brew services list
+brew install mysql@5.7
+brew services start mysql@5.7
+brew services restart mysql@5.7
+brew services stop mysql@5.7
+#brew services status mysql@5.7 // not work
+ps -ax | grep "[m]ysql"
+brew services list | grep mysql@5.7 | awk '{ print $2}'
+
+echo 'export PATH="/opt/homebrew/opt/mysql@5.7/bin:$PATH"' >> ~/.zshrc
+source .zshrc
+mysql_secure_installation
+
+new root password = nqIfAdYh0n9g    for diging
+
