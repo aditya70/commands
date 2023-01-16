@@ -1,0 +1,21 @@
+
+# SDKMan should simplify such operations for several other software frameworks like Java, Groovy, Spring, Gradle, etc
+sdk install maven yourVersion
+sdk install maven anotherVersion
+sdk use maven yourVersion
+
+
+# sdk installation
+curl -s "https://get.sdkman.io" | bash
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+sdk version
+sdk help
+sdk list
+
+sdk list java
+sdk install java 14.0.2-zulu
+sdk use java 14.0.1.j9-adpt
+sdk default java 14.0.1.j9-adpt
+sdk uninstall java 14.0.1.j9-adpt
+sdk current java
+java -version

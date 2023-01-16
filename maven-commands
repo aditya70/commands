@@ -1,0 +1,26 @@
+# maven commands
+export JAVA_HOME=/path/to/java
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+
+<properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+</properties>
+
+
+~/.bash_profile
+export M2_HOME=/Users/yourusername/apache-maven-3.2.5 (Maven 3.2.5 path)
+export PATH=$PATH:$M2_HOME/bin
+
+ln -s /installation/directory/of/maven-v1 maven
+export M2_HOME=/path/to/maven
+export PATH=$PATH:$M2_HOME/bin
+
+sdk install maven 3.8.7 // worked
+sdk use maven 3.8.7
+mvn -v
+/Users/aditya/.sdkman/tmp/maven-3.8.7.bin to /Users/aditya/.sdkman/tmp/maven-3.8.7.zip
+
+sdk install maven // worked
+
+
