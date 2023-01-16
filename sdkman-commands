@@ -12,6 +12,7 @@ sdk version
 sdk help
 sdk list
 
+sdk update
 sdk list java
 sdk install java 14.0.2-zulu
 sdk use java 14.0.1.j9-adpt

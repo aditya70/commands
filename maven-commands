@@ -22,5 +22,9 @@ mvn -v
 /Users/aditya/.sdkman/tmp/maven-3.8.7.bin to /Users/aditya/.sdkman/tmp/maven-3.8.7.zip
 
 sdk install maven // worked
+mvn clean jetty:run
+mvn clean jetty:run -X // details log
+mvn clean
+mvn compile
 
 

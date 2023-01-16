@@ -91,3 +91,6 @@ curl -s "https://get.sdkman.io" | bash
 sdk list java 
 sdk install java 17.0.4.1-tem
 /Users/freedev/.sdkman/candidates/java/17.0.4.1-tem
+
+
+echo $JAVA_HOME
