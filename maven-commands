@@ -7,6 +7,13 @@ export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
     <maven.compiler.target>1.8</maven.compiler.target>
 </properties>
 
+<plugins>
+	<plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>2.0.2</version>
+	</plugin>
+</plugins>                
 
 ~/.bash_profile
 export M2_HOME=/Users/yourusername/apache-maven-3.2.5 (Maven 3.2.5 path)
@@ -20,6 +27,10 @@ sdk install maven 3.8.7 // worked
 sdk use maven 3.8.7
 mvn -v
 /Users/aditya/.sdkman/tmp/maven-3.8.7.bin to /Users/aditya/.sdkman/tmp/maven-3.8.7.zip
+
+
+export M2_HOME=/Users/aditya/.sdkman/candidates/maven/current
+export PATH=$PATH:$M2_HOME/bin
 
 sdk install maven // worked
 mvn clean jetty:run

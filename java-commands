@@ -92,5 +92,7 @@ sdk list java
 sdk install java 17.0.4.1-tem
 /Users/freedev/.sdkman/candidates/java/17.0.4.1-tem
 
-
 echo $JAVA_HOME
+=================== java home =======================
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8.0_341`
+export PATH="/Library/Java/JavaVirtualMachines/jdk1.8.0_341.jdk/Contents/Home/bin:$PATH"
