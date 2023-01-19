@@ -13,7 +13,7 @@ netstat –aon | find "<port number>"
 netstat -np TCP | find "80"
 
 lsof -i :808
-ps -ef|grep tomcat
+
 jps -l
 ============
 Open the Terminal app to move the unarchived distribution to /usr/local like so:
@@ -26,5 +26,72 @@ Change ownership of the /Library/Tomcat folder hierarchy:
 sudo chown -R <your_username> /Library/Tomcat
 Make all scripts in Tomcat’s ./bin folder executable:
 sudo chmod +x /Library/Tomcat/bin/*.sh
+
+pkill -9 -f tomcat
+pkill -9 -f catalina
+ps -ef|grep tomcat
+ps -ef | grep '[t]omcat' // accurate way
+ps -ef |grep 'catalina'
+
+=============================== notes working tomcat ================
+
+===========
+export ANDROID_HOME=/Users/aditya/Library/Android/sdk
+export PATH=$ANDROID_HOME/platform-tools:$PATH
+export PATH=$ANDROID_HOME/tools:$PATH
+export PATH=$ANDROID_HOME/tools/bin:$PATH
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/aditya/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/aditya/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/aditya/opt/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/aditya/opt/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+export PATH="/opt/homebrew/opt/mysql@5.7/bin:$PATH"
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+===========
+(base) aditya@Adityas-Air ~ % javac -version
+javac 1.8.0_292
+(base) aditya@Adityas-Air ~ % java -version
+openjdk version "1.8.0_292"
+OpenJDK Runtime Environment (AdoptOpenJDK)(build 1.8.0_292-b10)
+OpenJDK 64-Bit Server VM (AdoptOpenJDK)(build 25.292-b10, mixed mode)
+(base) aditya@Adityas-Air ~ % 
+
+=========
+(base) aditya@Adityas-Air ~ % echo $JAVA_HOME
+
+(base) aditya@Adityas-Air ~ % echo $JRE_HOME
+
+(base) aditya@Adityas-Air ~ %
+
+=======
+Downloads folder location-
+apache-tomcat-9.0.71
+// start by shell command
+
+====
+
+
+
+
+
+
+
 
 

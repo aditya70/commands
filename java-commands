@@ -104,3 +104,8 @@ export PATH="/Library/Java/JavaVirtualMachines/jdk1.8.0_341.jdk/Contents/Home/bi
 
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_341.jdk/Contents/Home/bin
 export PATH=$JAVA_HOME:$PATH
+
+======= 18th Jan 2022 =======
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+env // to see all environment variables, sometimes JAVA_HOME is set here instead of zshrc file // unset <variable_name> to remove environmental variable
