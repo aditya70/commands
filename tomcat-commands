@@ -85,9 +85,30 @@ Downloads folder location-
 apache-tomcat-9.0.71
 // start by shell command
 
+======
+(base) aditya@Adityas-Air bin % ./shutdown.sh 
+Using CATALINA_BASE:   /Users/aditya/Downloads/apache-tomcat-9.0.71
+Using CATALINA_HOME:   /Users/aditya/Downloads/apache-tomcat-9.0.71
+Using CATALINA_TMPDIR: /Users/aditya/Downloads/apache-tomcat-9.0.71/temp
+Using JRE_HOME:        /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
+Using CLASSPATH:       /Users/aditya/Downloads/apache-tomcat-9.0.71/bin/bootstrap.jar:/Users/aditya/Downloads/apache-tomcat-9.0.71/bin/tomcat-juli.jar
+Using CATALINA_OPTS: 
+======
+(base) aditya@Adityas-Air bin % ./startup.sh 
+Using CATALINA_BASE:   /Users/aditya/Downloads/apache-tomcat-9.0.71
+Using CATALINA_HOME:   /Users/aditya/Downloads/apache-tomcat-9.0.71
+Using CATALINA_TMPDIR: /Users/aditya/Downloads/apache-tomcat-9.0.71/temp
+Using JRE_HOME:        /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
+Using CLASSPATH:       /Users/aditya/Downloads/apache-tomcat-9.0.71/bin/bootstrap.jar:/Users/aditya/Downloads/apache-tomcat-9.0.71/bin/tomcat-juli.jar
+Using CATALINA_OPTS:   
+Tomcat started.
+
+=====
+(base) aditya@Adityas-Air ~ % /usr/libexec/java_home 
+/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
+(base) aditya@Adityas-Air ~ % 
+
 ====
-
-
 
 
 
