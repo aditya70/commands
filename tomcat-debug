@@ -1,0 +1,40 @@
+
+1)delete web.xml
+2)delete server
+3)delete server from preferences
+
+1) change port number
+2) delete server
+
+1) add elemnet tag in web.xml file
+
+1) add another tomcat server on clicking project properties and going to project Facets
+
+1) delete server from eclipse workspace, download and extract another tomcat server into eclipse workspace
+
+1) change admin port, http port after double clicking tomcat server
+
+1) use tomcat installation tomcat server properties (double click on tomcat server)
+
+
+cmd + shift + . // hidden files
+1) eclipse workspace > .metadata > .plugins > org.eclipse.core.runtime > .settings > 
+
+  delete org.eclipse.jst.server.tomcat.core.prefs
+  delete org.eclipse.wst.server.core.prefs
+
+2) Window > show view > servers > delete server
+3)  restart system and start eclipse
+4) freshly add tomcat server
+
+1) start
+2) change port number
+3) clean and start
+
+1) netstat -ano | findstr :8080
+2) taskkill /PID 18136 /F     // Windows OS
+
+1) Resource monitor to check port usage and kill the process in task manager // Windows
+
+Reasons for tomcat server failed to start -
+1) there may be error in jsp, java, web.xml file. Fix the error and start the server. Let's say if we mispell dispatcher in web.xml and try to start server
