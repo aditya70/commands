@@ -82,7 +82,7 @@ java -version
  # Java will be installed here: /usr/local/opt/openjdk@17/bin/java // not installed here
  # For the system Java wrappers to find this JDK, symlink it with: sudo ln -sfn /usr/local/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk   //path different not work
 
-sudo ln -sfn /opt/homebrew/Cellar/openjdk@17/17.0.5/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+sudo ln -sfn /opt/homebrew/Cellar/openjdk@17/17.0.6/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk  // works
 echo 'export PATH="/Library/Java/JavaVirtualMachines/openjdk.jdk/Contents/Home/bin:$PATH"' >> ~/.zshrc
 source ~/.zshrc
 
@@ -109,3 +109,11 @@ export PATH=$JAVA_HOME:$PATH
 export JAVA_HOME=$(/usr/libexec/java_home)
 
 env // to see all environment variables, sometimes JAVA_HOME is set here instead of zshrc file // unset <variable_name> to remove environmental variable
+
+
+======
+find . -name 'eclipse.ini'
+./eclipse/jee-2022-12/Eclipse.app/Contents/Eclipse/eclipse.ini
+./eclipse/jee-2022-122/Eclipse.app/Contents/Eclipse/eclipse.ini
+-vm
+/opt/homebrew/Cellar/openjdk@17/17.0.6/libexec/openjdk.jdk/Contents/Home/bin
