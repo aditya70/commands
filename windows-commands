@@ -1,0 +1,17 @@
+Environmental Variable:   PATH C:\Program Files\Java\jdk1.8.0_351\bin
+CLASSPATH C:\Program Files\Java\jdk1.8.0_351\lib
+javac -version
+java -version
+
+C:\Apache-Tomcat\apache-tomcat-8.5.85-windows-x64\apache-tomcat-8.5.85\bin> startup
+C:\Apache-Tomcat\apache-tomcat-8.5.85-windows-x64\apache-tomcat-8.5.85\bin shutdown
+
+Services window, locate the Apache Tomcat service then Start or Stop
+
+==== maven ====
+System variable 
+MAVEN_HOME = C:\Program Files\Maven\apache-maven-3.8.7
+
+Path System variable - new variable %MAVEN_HOME%\bin
+
+mvn -version
