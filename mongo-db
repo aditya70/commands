@@ -1,0 +1,21 @@
+
+/Users/aditya/Downloads/applications/mongodb-macos-aarch64-6.0.4/bin
+sudo cp /Users/aditya/Downloads/applications/mongodb-macos-aarch64-6.0.4/bin/* /usr/local/bin/
+sudo ln -s  /Users/aditya/Downloads/applications/mongodb-macos-aarch64-6.0.4/bin/* /usr/local/bin/
+
+brew tap mongodb/brew
+brew update
+brew install mongodb-community@6.0
+brew --prefix
+brew services start mongodb-community@6.0
+brew services stop mongodb-community@6.0
+brew services list
+ps aux | grep -v grep | grep mongod
+mongosh
+mongo --version
+
+if you don't want/need a background service you can just run:
+mongod --config /opt/homebrew/etc/mongod.conf
+show dbs
+
+mongodb://localhost:27017
