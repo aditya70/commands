@@ -11,11 +11,17 @@ brew services start mongodb-community@6.0
 brew services stop mongodb-community@6.0
 brew services list
 ps aux | grep -v grep | grep mongod
-mongosh
+
 mongo --version
 
 if you don't want/need a background service you can just run:
 mongod --config /opt/homebrew/etc/mongod.conf
 show dbs
 
-mongodb://localhost:27017
+mongodb://localhost:27017 // not worked
+mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.6.2 // worked
+mongod --config /opt/homebrew/etc/mongod.conf --fork
+mongosh
+
+mongosh
+show dbs;

@@ -4,6 +4,7 @@ zookeeper-server-start /opt/homebrew/etc/kafka/zookeeper.properties
 kafka-server-start /opt/homebrew/etc/kafka/server.properties
 kafka-topics --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic foobar
 kafka-console-producer --broker-list localhost:9092 --topic foobar
+kafka-console-consumer --bootstrap-server localhost:9092 --topic foobar --from-beginning
 
 /opt/homebrew/Cellar/zookeeper/3.7.0_1
 
@@ -11,3 +12,5 @@ brew services restart kafka
 
 Or, if you don't want/need a background service you can just run:
   /opt/homebrew/opt/kafka/bin/kafka-server-start /opt/homebrew/etc/kafka/server.properties
+  
+localhost:2181  
