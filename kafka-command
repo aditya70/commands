@@ -2,9 +2,10 @@
 brew install kafka
 zookeeper-server-start /opt/homebrew/etc/kafka/zookeeper.properties
 kafka-server-start /opt/homebrew/etc/kafka/server.properties
-kafka-topics --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic foobar
-kafka-console-producer --broker-list localhost:9092 --topic foobar
-kafka-console-consumer --bootstrap-server localhost:9092 --topic foobar --from-beginning
+
+kafka-topics --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic foobar  // Created topic foobar.
+kafka-console-producer --broker-list localhost:9092 --topic foobar    // >
+kafka-console-consumer --bootstrap-server localhost:9092 --topic foobar --from-beginning // prints message
 
 /opt/homebrew/Cellar/zookeeper/3.7.0_1
 
@@ -14,3 +15,14 @@ Or, if you don't want/need a background service you can just run:
   /opt/homebrew/opt/kafka/bin/kafka-server-start /opt/homebrew/etc/kafka/server.properties
   
 localhost:2181  
+
+================ start services =======
+brew services start zookeeper
+brew services start kafka
+
+================ log path =============
+/opt/homebrew/var/log/kafka
+/opt/homebrew/var/log/zookeeper
+
+====== Issue resolution ================
+remove meta.properties file from the path  /opt/homebrew/var/lib/kafka-logs
