@@ -1,0 +1,7 @@
+
+brew tap elastic/tap
+brew install elastic/tap/elasticsearch-full
+brew services start elasticsearch-full
+http://localhost:9200/
+version number 7.17.4
+

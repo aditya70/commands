@@ -12,7 +12,7 @@ netstat -na | grep "8080"
 netstat –aon | find "<port number>"
 netstat -np TCP | find "80"
 
-lsof -i :808
+lsof -i :8080
 
 jps -l
 ============

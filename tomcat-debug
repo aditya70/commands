@@ -38,3 +38,8 @@ cmd + shift + . // hidden files
 
 Reasons for tomcat server failed to start -
 1) there may be error in jsp, java, web.xml file. Fix the error and start the server. Let's say if we mispell dispatcher in web.xml and try to start server
+
+============== port 8080 occupied by zookeeper ==========
+
+clientPort=2181
+admin.serverPort=2182 // add port in zookeeper config (/opt/homebrew/etc/zookeeper/zoo.cfg)
