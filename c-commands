@@ -1,1 +1,2 @@
 g++ -Wall -o "template" "template.cpp" 
+geany 1.cpp 
