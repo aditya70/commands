@@ -27,6 +27,10 @@ brew services start kafka
 ====== Issue resolution ================
 remove meta.properties file from the path  /opt/homebrew/var/lib/kafka-logs
 
-
-kafka-topics.sh --zookeeper localhost:2181 --list
+/opt/homebrew/Cellar/kafka/3.3.1_1/libexec bin/kafka-topics.sh --bootstrap-server localhost:9092 --list
 find . -name kafka-topics.sh
+
+
+===================================== zookeeper.properties ========
+path =/opt/homebrew/etc/zookeeper/zoo.cfg
+admin.serverPort=9876
